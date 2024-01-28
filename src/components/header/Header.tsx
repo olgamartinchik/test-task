@@ -4,8 +4,8 @@ import style from './Header.module.css';
 const Header: React.FC = () => {
   return (
     <header className={style.header}>
-      <p>CAT</p>
-      <p>currencies academic terms</p>
+      <h1 className={style.title}>CAT</h1>
+      <p className={style.subtitle}>currencies academic terms</p>
     </header>
   );
 };
