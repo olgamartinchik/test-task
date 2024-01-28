@@ -7,7 +7,7 @@ const Layout: React.FC = () => {
   return (
     <div className={style.layout}>
       <Main />
-      <Footer currency='rub' />
+      <Footer />
     </div>
   );
 };
