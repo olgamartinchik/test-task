@@ -14,8 +14,14 @@
   line-height: 1.5;
   width: min-content;
 }
+.shadow {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
 @media (max-width: 768px) {
   .header {
     justify-content: center;
+  }
+  .shadow {
+    text-shadow: none;
   }
 }

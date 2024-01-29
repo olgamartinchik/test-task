@@ -1,7 +1,3 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 @font-face {
   font-family: 'Kreon';
   src: url('./assets/fonts/Kreon-Regular.ttf') format('truetype'),
@@ -12,17 +8,24 @@
 
 @font-face {
   font-family: 'Kreon';
-  src: url('/src/assets/fonts/Kreon-Regular.ttf') format('truetype'),
-    url('/src/assets/fonts/Kreon-Light.ttf') format('truetype');
+  src: url('./assets/fonts/Kreon-Regular.ttf') format('truetype'),
+    url('./assets/fonts/Kreon-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
+:root {
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --color-hover: #f0efef;
+  --color-border: #dad6d6;
+}
+
 * {
-  color: #000;
+  color: var(--color-primary);
   margin: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: 'Kreon';
+  font-family: 'Kreon', serif;
 }

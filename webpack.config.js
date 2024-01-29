@@ -24,12 +24,19 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf|png|jpg|jpeg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
         use: {
           loader: 'url-loader',
           options: {
-            name: 'assets/[name].[ext]',
+            name: 'assets/img/[name].[ext]',
           },
+        },
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name].[ext]',
         },
       },
     ],

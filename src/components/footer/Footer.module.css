@@ -8,8 +8,8 @@
   font-weight: 400;
   text-transform: capitalize;
   height: 30%;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
 }
 @media (max-width: 768px) {
   .footer {
