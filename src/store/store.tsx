@@ -10,8 +10,7 @@ const rootReducer = combineReducers({
 
 const store = configureStore({
   reducer: rootReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(currenciesApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(currenciesApi.middleware),
   devTools: true,
 });
 

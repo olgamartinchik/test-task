@@ -9,12 +9,8 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ isDropdownOpen }) => {
   return (
     <header className={style.header}>
-      <h1 className={clsx(style.title, !isDropdownOpen && style.shadow)}>
-        CAT
-      </h1>
-      <p className={clsx(style.subtitle, !isDropdownOpen && style.shadow)}>
-        currencies academic terms
-      </p>
+      <h1 className={clsx(style.title, !isDropdownOpen && style.shadow)}>CAT</h1>
+      <p className={clsx(style.subtitle, !isDropdownOpen && style.shadow)}>currencies academic terms</p>
     </header>
   );
 };

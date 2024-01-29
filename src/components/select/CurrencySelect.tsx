@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCurrency } from '../../store/currencies/currenciesSlice';
 import { useGetCurrenciesQuery } from '../../store/currencies/currenciesApi';
@@ -9,17 +9,14 @@ interface CurrencySelectProps {
   isDropdownOpen: boolean;
   setIsDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
-const CurrencySelect: React.FC<CurrencySelectProps> = ({
-  isDropdownOpen,
-  setIsDropdownOpen,
-}) => {
+const CurrencySelect: React.FC<CurrencySelectProps> = ({ isDropdownOpen, setIsDropdownOpen }) => {
   const dispatch = useDispatch();
   const { data: currenciesResponse, isLoading } = useGetCurrenciesQuery();
-  const selectedCurrency = useSelector(
-    (state: RootState) => state.currencies.selectedCurrency
-  );
-  const currencies = currenciesResponse?.data || [];
+  const selectedCurrency = useSelector((state: RootState) => state.currencies.selectedCurrency);
+
   const [inputValue, setInputValue] = useState(selectedCurrency || '');
+
+  const currencies = useMemo(() => currenciesResponse?.data || [], [currenciesResponse]);
 
   useEffect(() => {
     if (!selectedCurrency && currencies.length !== 0) {
@@ -42,23 +39,14 @@ const CurrencySelect: React.FC<CurrencySelectProps> = ({
     <>
       {isLoading && <p>Loading...</p>}
       <div className={style.container}>
-        <input
-          type='text'
-          value={inputValue}
-          readOnly
-          className={style.input}
-        />
+        <input type="text" value={inputValue} readOnly className={style.input} />
         <div onClick={handleChevronClick} className={style.imgContainer}>
-          <img src='assets/img/chevron-down.svg' alt='' className={style.img} />
+          <img src="assets/img/chevron-down.svg" alt="" className={style.img} />
         </div>
         {isDropdownOpen && (
           <div className={style.currencyContainer}>
             {currencies.map((currency) => (
-              <div
-                key={currency.id}
-                onClick={() => handleOptionClick(currency.id)}
-                className={style.currency}
-              >
+              <div key={currency.id} onClick={() => handleOptionClick(currency.id)} className={style.currency}>
                 {currency.id}
               </div>
             ))}

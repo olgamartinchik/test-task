@@ -10,13 +10,10 @@ const Main: React.FC = () => {
     <main className={style.main}>
       <div className={style.mainContainer}>
         <Header isDropdownOpen={isDropdownOpen} />
-        <CurrencySelect
-          isDropdownOpen={isDropdownOpen}
-          setIsDropdownOpen={setIsDropdownOpen}
-        />
+        <CurrencySelect isDropdownOpen={isDropdownOpen} setIsDropdownOpen={setIsDropdownOpen} />
       </div>
       <div className={style.imgContainer}>
-        <img src='assets/img/Kitten.png' alt='Kitten' className={style.image} />
+        <img src="assets/img/Kitten.png" alt="Kitten" className={style.image} />
       </div>
     </main>
   );
