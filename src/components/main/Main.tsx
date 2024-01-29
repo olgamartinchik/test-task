@@ -7,10 +7,14 @@ const Main: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <main className={style.main}>
+    <main className={style.main} data-testid="main-component">
       <div className={style.mainContainer}>
         <Header isDropdownOpen={isDropdownOpen} />
-        <CurrencySelect isDropdownOpen={isDropdownOpen} setIsDropdownOpen={setIsDropdownOpen} />
+        <CurrencySelect
+          isDropdownOpen={isDropdownOpen}
+          setIsDropdownOpen={setIsDropdownOpen}
+          data-testid="currency-select"
+        />
       </div>
       <div className={style.imgContainer}>
         <img src="assets/img/Kitten.png" alt="Kitten" className={style.image} />

@@ -39,14 +39,14 @@ const CurrencySelect: React.FC<CurrencySelectProps> = ({ isDropdownOpen, setIsDr
     <>
       {isLoading && <p>Loading...</p>}
       <div className={style.container}>
-        <input type="text" value={inputValue} readOnly className={style.input} />
-        <div onClick={handleChevronClick} className={style.imgContainer}>
+        <input className={style.input} type="text" value={inputValue} readOnly />
+        <div className={style.imgContainer} onClick={handleChevronClick} data-testid="arrow-btn">
           <img src="assets/img/chevron-down.svg" alt="" className={style.img} />
         </div>
         {isDropdownOpen && (
-          <div className={style.currencyContainer}>
+          <div className={style.currencyContainer} data-testid="currency-container">
             {currencies.map((currency) => (
-              <div key={currency.id} onClick={() => handleOptionClick(currency.id)} className={style.currency}>
+              <div className={style.currency} key={currency.id} onClick={() => handleOptionClick(currency.id)}>
                 {currency.id}
               </div>
             ))}

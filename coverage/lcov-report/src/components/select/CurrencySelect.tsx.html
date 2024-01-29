@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/21</span>
+                <span class='fraction'>14/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">91.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>11/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>5/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>12/18</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -134,33 +134,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">25x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -194,44 +194,44 @@ interface CurrencySelectProps {
   isDropdownOpen: boolean;
   setIsDropdownOpen: React.Dispatch&lt;React.SetStateAction&lt;boolean&gt;&gt;;
 }
-const CurrencySelect: React.FC&lt;CurrencySelectProps&gt; = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({</span> isDropdownOpen, setIsDropdownOpen }) =&gt; {</span>
-  const dispatch = <span class="cstat-no" title="statement not covered" >useDispatch();</span>
-  const { data: currenciesResponse, isLoading } = <span class="cstat-no" title="statement not covered" >useGetCurrenciesQuery();</span>
-  const selectedCurrency = <span class="cstat-no" title="statement not covered" >useSelector(<span class="fstat-no" title="function not covered" >(s</span>tate: RootState) =&gt; <span class="cstat-no" title="statement not covered" >state.currencies.selectedCurrency)</span>;</span>
+const CurrencySelect: React.FC&lt;CurrencySelectProps&gt; = ({ isDropdownOpen, setIsDropdownOpen }) =&gt; {
+  const dispatch = useDispatch();
+  const { data: currenciesResponse, isLoading } = useGetCurrenciesQuery();
+  const selectedCurrency = useSelector((state: RootState) =&gt; state.currencies.selectedCurrency);
 &nbsp;
-  const [inputValue, setInputValue] = <span class="cstat-no" title="statement not covered" >useState(selectedCurrency || '');</span>
+  const [inputValue, setInputValue] = useState(selectedCurrency || '');
 &nbsp;
-  const currencies = <span class="cstat-no" title="statement not covered" >useMemo(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >currenciesResponse?.data || [],</span> [currenciesResponse]);</span>
+  const currencies = useMemo(() =&gt; currenciesResponse?.data || [], [currenciesResponse]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    if (!selectedCurrency &amp;&amp; currencies.length !== 0) {</span>
+  useEffect(() =&gt; {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!selectedCurrency &amp;&amp; currencies.length !== 0) {
 <span class="cstat-no" title="statement not covered" >      dispatch(selectCurrency(currencies[0].id));</span>
 <span class="cstat-no" title="statement not covered" >      setInputValue(currencies[0].id);</span>
     }
   }, [currencies, dispatch, selectedCurrency]);
 &nbsp;
-  const handleChevronClick = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    setIsDropdownOpen(!isDropdownOpen);</span>
+  const handleChevronClick = () =&gt; {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 &nbsp;
-  const handleOptionClick = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(v</span>alue: string) =&gt; {</span>
+  const handleOptionClick = <span class="fstat-no" title="function not covered" >(v</span>alue: string) =&gt; {
 <span class="cstat-no" title="statement not covered" >    setInputValue(value);</span>
 <span class="cstat-no" title="statement not covered" >    setIsDropdownOpen(false);</span>
 <span class="cstat-no" title="statement not covered" >    dispatch(selectCurrency(value));</span>
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;&gt;
       {isLoading &amp;&amp; &lt;p&gt;Loading...&lt;/p&gt;}
       &lt;div className={style.container}&gt;
-        &lt;input type="text" value={inputValue} readOnly className={style.input} /&gt;
-        &lt;div onClick={handleChevronClick} className={style.imgContainer}&gt;
+        &lt;input className={style.input} type="text" value={inputValue} readOnly /&gt;
+        &lt;div className={style.imgContainer} onClick={handleChevronClick} data-testid="arrow-btn"&gt;
           &lt;img src="assets/img/chevron-down.svg" alt="" className={style.img} /&gt;
         &lt;/div&gt;
         {isDropdownOpen &amp;&amp; (
-          &lt;div className={style.currencyContainer}&gt;
+          &lt;div className={style.currencyContainer} data-testid="currency-container"&gt;
             {currencies.map(<span class="fstat-no" title="function not covered" >(c</span>urrency) =&gt; (
-<span class="cstat-no" title="statement not covered" >              &lt;div key={currency.id} onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >handleOptionClick(currency.id)}</span> className={style.currency}&gt;</span>
+<span class="cstat-no" title="statement not covered" >              &lt;div className={style.currency} key={currency.id} onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >handleOptionClick(currency.id)}</span>&gt;</span>
                 {currency.id}
               &lt;/div&gt;
             ))}
@@ -250,7 +250,7 @@ export default CurrencySelect;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-01-29T10:29:48.600Z
+                at 2024-01-29T13:38:16.052Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
