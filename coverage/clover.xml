@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1706535496088" clover="3.2.0">
-  <project timestamp="1706535496088" name="All files">
+<coverage generated="1706606746480" clover="3.2.0">
+  <project timestamp="1706606746480" name="All files">
     <metrics statements="43" coveredstatements="35" conditionals="16" coveredconditionals="15" methods="19" coveredmethods="14" elements="78" coveredelements="64" complexity="0" loc="43" ncloc="43" packages="8" files="10" classes="10"/>
     <package name="src">
       <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="App.tsx" path="D:\IT-MENTOR\test-task\test-task\src\App.tsx">
+      <file name="App.tsx" path="D:\IT-MENTOR\test-task\test2\test-task\src\App.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
       </file>
-      <file name="index.tsx" path="D:\IT-MENTOR\test-task\test-task\src\index.tsx">
+      <file name="index.tsx" path="D:\IT-MENTOR\test-task\test2\test-task\src\index.tsx">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.footer">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="Footer.tsx" path="D:\IT-MENTOR\test-task\test-task\src\components\footer\Footer.tsx">
+      <file name="Footer.tsx" path="D:\IT-MENTOR\test-task\test2\test-task\src\components\footer\Footer.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="6" type="stmt"/>
@@ -25,7 +25,7 @@
     </package>
     <package name="src.components.header">
       <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <file name="Header.tsx" path="D:\IT-MENTOR\test-task\test-task\src\components\header\Header.tsx">
+      <file name="Header.tsx" path="D:\IT-MENTOR\test-task\test2\test-task\src\components\header\Header.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="9" count="2" type="stmt"/>
         <line num="10" count="4" type="stmt"/>
@@ -33,7 +33,7 @@
     </package>
     <package name="src.components.main">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Main.tsx" path="D:\IT-MENTOR\test-task\test-task\src\components\main\Main.tsx">
+      <file name="Main.tsx" path="D:\IT-MENTOR\test-task\test2\test-task\src\components\main\Main.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="6" type="stmt"/>
@@ -42,7 +42,7 @@
     </package>
     <package name="src.components.select">
       <metrics statements="18" coveredstatements="12" conditionals="12" coveredconditionals="11" methods="8" coveredmethods="5"/>
-      <file name="CurrencySelect.tsx" path="D:\IT-MENTOR\test-task\test-task\src\components\select\CurrencySelect.tsx">
+      <file name="CurrencySelect.tsx" path="D:\IT-MENTOR\test-task\test2\test-task\src\components\select\CurrencySelect.tsx">
         <metrics statements="18" coveredstatements="12" conditionals="12" coveredconditionals="11" methods="8" coveredmethods="5"/>
         <line num="12" count="3" type="stmt"/>
         <line num="13" count="13" type="stmt"/>
@@ -66,7 +66,7 @@
     </package>
     <package name="src.layout">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Layout.tsx" path="D:\IT-MENTOR\test-task\test-task\src\layout\Layout.tsx">
+      <file name="Layout.tsx" path="D:\IT-MENTOR\test-task\test2\test-task\src\layout\Layout.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
@@ -74,7 +74,7 @@
     </package>
     <package name="src.store">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="store.tsx" path="D:\IT-MENTOR\test-task\test-task\src\store\store.tsx">
+      <file name="store.tsx" path="D:\IT-MENTOR\test-task\test2\test-task\src\store\store.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="3" type="stmt"/>
         <line num="11" count="3" type="stmt"/>
@@ -83,14 +83,14 @@
     </package>
     <package name="src.store.currencies">
       <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
-      <file name="currenciesApi.ts" path="D:\IT-MENTOR\test-task\test-task\src\store\currencies\currenciesApi.ts">
+      <file name="currenciesApi.ts" path="D:\IT-MENTOR\test-task\test2\test-task\src\store\currencies\currenciesApi.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="11" count="3" type="stmt"/>
         <line num="14" count="3" type="stmt"/>
         <line num="16" count="4" type="stmt"/>
         <line num="21" count="3" type="stmt"/>
       </file>
-      <file name="currenciesSlice.ts" path="D:\IT-MENTOR\test-task\test-task\src\store\currencies\currenciesSlice.ts">
+      <file name="currenciesSlice.ts" path="D:\IT-MENTOR\test-task\test2\test-task\src\store\currencies\currenciesSlice.ts">
         <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="8" count="3" type="stmt"/>
         <line num="12" count="3" type="stmt"/>
