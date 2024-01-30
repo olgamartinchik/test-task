@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Kreon';
+  src:
+    url('./assets/fonts/Kreon-Regular.ttf') format('truetype'),
+    url('./assets/fonts/Kreon-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kreon';
+  src:
+    url('./assets/fonts/Kreon-Regular.ttf') format('truetype'),
+    url('./assets/fonts/Kreon-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --color-hover: #f0efef;
+  --color-border: #dad6d6;
+}
+
+* {
+  color: var(--color-primary);
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Kreon', serif;
+}
