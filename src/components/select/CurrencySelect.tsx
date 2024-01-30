@@ -46,7 +46,12 @@ const CurrencySelect: React.FC<CurrencySelectProps> = ({ isDropdownOpen, setIsDr
         {isDropdownOpen && (
           <div className={style.currencyContainer} data-testid="currency-container">
             {currencies.map((currency) => (
-              <div className={style.currency} key={currency.id} onClick={() => handleOptionClick(currency.id)}>
+              <div
+                className={style.currency}
+                key={currency.id}
+                onClick={() => handleOptionClick(currency.id)}
+                data-testid="currency"
+              >
                 {currency.id}
               </div>
             ))}
